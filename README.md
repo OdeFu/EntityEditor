@@ -10,6 +10,7 @@ It is meant to save you from the initial hassle with the packages.
 
 ** Added Packages
 - angular
+- angularui:angular-ui-router
 - angular:angular-material
 - sebhero:angular-material-icons
 - pbastowski:angular-babel
