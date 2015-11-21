@@ -1,0 +1,8 @@
+{
+  "verbose": false,     // true shows files being compiled
+  "debug": false,       // true displays this config file
+  "modules": "common",  // what module format Babel should use. See Babel documentation for "modules" option.
+  "blacklist": ["useStrict"],  // Do not change this unless you know very well what you are doing.
+  "stage": 0,            // see Babel documentation for stage option.
+  "extensions": ["js"]   // "js" means compile all ".js" files.
+}
