@@ -1,15 +1,13 @@
-'use strict';
-
 routerConfig = ($urlRouterProvider, $stateProvider, $locationProvider) => {
   'ngInject';
 
   $locationProvider.html5Mode(true);
 
-  $stateProvider.state('main', {
-    url: '/main',
-    templateUrl: 'client/views/main/main.html',
-    controller: 'MainController'
+  $stateProvider.state('home', {
+    url: '/home',
+    templateUrl: 'client/views/home/home.html',
+    controller: 'HomeController'
   });
 
-  $urlRouterProvider.otherwise('/main');
+  $urlRouterProvider.otherwise('/home');
 };
