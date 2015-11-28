@@ -2,7 +2,7 @@
 
 const App = angular.module('metangular', ['angular-meteor', 'ui.router'])
   .config(routerConfig)
-  .controller(HomeController);
+  .controller('HomeController', HomeController);
 
 App.run(($rootScope, $log) => {
   $rootScope.$on('$stateChangeStart', (event, toState, toParams, fromState, fromParams) => {
