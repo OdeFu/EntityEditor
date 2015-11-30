@@ -6,7 +6,8 @@ routerConfig = ($urlRouterProvider, $stateProvider, $locationProvider) => {
   $stateProvider.state('home', {
     url: '/home',
     templateUrl: 'client/views/home/home.html',
-    controller: 'HomeController'
+    controller: 'HomeController',
+    controllerAs: 'homeCtrl'
   });
 
   $urlRouterProvider.otherwise('/home');

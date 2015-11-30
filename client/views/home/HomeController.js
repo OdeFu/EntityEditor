@@ -1,7 +1,7 @@
 HomeController = class HomeController {
-  constructor($scope) {
+  constructor() {
     'ngInject';
 
-    $scope.prop = 'Metangular';
+    this.prop = 'Metangular';
   }
 };
