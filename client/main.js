@@ -1,5 +1,8 @@
 'use strict';
 
+import { routerConfig } from './config/routes';
+import { HomeController } from './views/home/HomeController';
+
 const App = angular.module('metangular', ['angular-meteor', 'ui.router'])
   .config(routerConfig)
   .controller('HomeController', HomeController);

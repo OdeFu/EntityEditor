@@ -1,4 +1,4 @@
-routerConfig = ($urlRouterProvider, $stateProvider, $locationProvider) => {
+export function routerConfig($urlRouterProvider, $stateProvider, $locationProvider) {
   'ngInject';
 
   $locationProvider.html5Mode(true);
@@ -11,4 +11,4 @@ routerConfig = ($urlRouterProvider, $stateProvider, $locationProvider) => {
   });
 
   $urlRouterProvider.otherwise('/home');
-};
+}

@@ -1,11 +1,11 @@
 Package.describe({
   name: 'underscore',
   summary: "Collection of small helpers: _.map, _.each, ...",
-  version: '1.0.4'
+  version: '1.0.5-modules.0'
 });
 
 Npm.depends({
-  lodash: '3.10.1',
+  lodash: '3.10.1'
 });
 
 //'.npm/package/node_modules/datatables/media/js/jquery.dataTables.js',

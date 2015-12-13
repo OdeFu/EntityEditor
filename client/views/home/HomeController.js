@@ -1,4 +1,4 @@
-HomeController = class HomeController {
+export class HomeController {
   constructor() {
     'ngInject';
 
