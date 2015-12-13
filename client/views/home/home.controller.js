@@ -2,6 +2,6 @@ export class HomeController {
   constructor() {
     'ngInject';
 
-    this.prop = 'Metangular';
+    this.name = 'Entity Editor';
   }
-};
+}

@@ -1,15 +1,24 @@
 'use strict';
 
 import { routerConfig } from './config/routes';
-import { HomeController } from './views/home/HomeController';
+import { HomeController } from './views/home/home.controller';
+import { LoginController } from './views/login/login.controller';
 
-const App = angular.module('metangular', ['angular-meteor', 'ui.router'])
+const App = angular.module('metangular', ['angular-meteor', 'ui.router', 'accounts.ui'])
   .config(routerConfig)
-  .controller('HomeController', HomeController);
+  .controller('HomeController', HomeController)
+  .controller('LoginController', LoginController);
 
-App.run(($rootScope, $log) => {
+App.run(($rootScope, $state, $log) => {
   $rootScope.$on('$stateChangeStart', (event, toState, toParams, fromState, fromParams) => {
     $log.info('State change start to', toState, 'from', fromState);
+
+    if (toState.name != 'login') {
+      if (!Meteor.user()) {
+        event.preventDefault();
+        return $state.go('login', { toState, toParams });
+      }
+    }
   });
 
   $rootScope.$on('$stateChangeSuccess', (event, toState, toParams, fromState, fromParams) => {
